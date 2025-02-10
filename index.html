@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Table</title>
+    <title>Acres Conserved Table</title>
 
     <!-- Google Font: Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -20,7 +20,8 @@
         }
 
         table {
-            width: 80%;
+            width: 90%;
+            max-width: 1000px;
             border-collapse: collapse;
             background: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -38,6 +39,7 @@
             background-color: #0074D9;
             color: white;
             font-weight: bold;
+            text-transform: uppercase;
         }
 
         tr:nth-child(even) {
@@ -47,22 +49,74 @@
         tr:hover {
             background-color: #ddd;
         }
+
+        /* Italicized rows for footnotes */
+        .footnote {
+            font-style: italic;
+            font-size: 14px;
+            background: #f4f4f4;
+            border-top: 2px solid #0074D9;
+        }
     </style>
 </head>
 <body>
     <table>
         <tr>
-            <th>Category</th>
-            <th>Value</th>
+            <th>Classification</th>
+            <th>Acres Conserved in 2006</th>
+            <th>Acres Conserved Since 2006</th>
+            <th>Change 2006-2024</th>
+            <th>Acres in Recommended Land Use Map</th>
         </tr>
         <tr>
-            <td>Example 1</td>
-            <td>100</td>
+            <td>EC Protected</td>
+            <td>1,798</td>
+            <td>2,216</td>
+            <td>23%</td>
+            <td>4,310</td>
         </tr>
         <tr>
-            <td>Example 2</td>
-            <td>200</td>
+            <td>Tier 1</td>
+            <td>186.4</td>
+            <td>771.15</td>
+            <td>314%</td>
+            <td>5,790</td>
+        </tr>
+        <tr>
+            <td>Tier 2</td>
+            <td>30.5</td>
+            <td>120.5</td>
+            <td>295%</td>
+            <td>1,885</td>
+        </tr>
+        <tr>
+            <td>Tier 3</td>
+            <td>243.14</td>
+            <td>741.4</td>
+            <td>205%</td>
+            <td>7,150</td>
+        </tr>
+        <tr>
+            <td><strong>Total (Protected + Tiers 1-3)</strong></td>
+            <td><strong>2,258</strong></td>
+            <td><strong>3,849</strong></td>
+            <td><strong>71%</strong></td>
+            <td><strong>19,135</strong></td>
+        </tr>
+        <tr>
+            <td>All Other Open Space</td>
+            <td>6,892.68*</td>
+            <td>7,922*</td>
+            <td>15%</td>
+            <td>6,131^</td>
+        </tr>
+        <tr class="footnote">
+            <td colspan="5">
+                *Acreage includes golf courses, a separate category in the recommended land use map, and all other public/private-owned open space properties outside conservation classifications.<br>
+                ^Acreage included all publicly-owned parkland properties at time of Plan.
+            </td>
         </tr>
     </table>
 </body>
 </html>
+
